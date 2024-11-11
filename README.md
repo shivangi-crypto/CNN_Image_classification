@@ -1,7 +1,5 @@
 # CNN_Image_classification# **CNN Image Classification on CIFAR-10**
 
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
-
 ## Table of Contents
 1. [Project Overview](#project-overview)
 2. [Dataset](#dataset)
@@ -51,5 +49,58 @@ Each model was trained from scratch, enabling a fair comparison of their classif
 
 ---
 
-## Project Structure
+---
+
+## Installation and Setup
+
+### Prerequisites
+- Python 3.7 or higher
+- [PyTorch](https://pytorch.org/get-started/locally/) (for GPU/CPU processing)
+- [Git](https://git-scm.com/)
+
+### Installation Steps
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/shivangi-crypto/CNN_Image_classification.git
+   cd CNN_Image_classification
+2. **Install Dependencies** (Install the required Python packages by running):
+    pip install -r requirements.txt
+4. **Download CIFAR-10 Dataset** (if not automatically downloaded in code):
+   ```python
+   from torchvision.datasets import CIFAR10
+   CIFAR10(root='./data', download=True)
+### Usage
+1. **Training a Model**
+2. **Evaluating a Model**
+3. **Hyperparameter Tuning**
+### Experiment Details
+The experiments in this project were designed to analyze:
+
+**Accuracy**: Training and validation accuracy on CIFAR-10.
+**Convergence Rate**: Stability and speed of convergence.
+**Computational Efficiency**: Comparison of resource usage across models.
+### Hyperparameters
+The following hyperparameters were tested:
+
+**Optimizer**: Adam (default), SGD (optional)
+**Learning Rates**: 0.001, 0.0001, 0.01
+**Regularization**: Dropout in AlexNet and Basic CNN, residual connections in ResNet-18
+All experiments included data augmentation (random flips, rotations, brightness) to boost generalization, and early stopping to prevent overfitting.
+### Key Observations
+## Results
+
+The table below summarizes the test accuracy and computational efficiency of each model on the CIFAR-10 dataset.
+
+| Model       | Test Accuracy | Computational Efficiency |
+|-------------|---------------|--------------------------|
+| Basic CNN   | 72.4%         | Moderate                 |
+| ResNet-18   | 82.3%         | High                     |
+| AlexNet     | 78.6%         | Moderate                 |
+| MobileNet   | 80.1%         | Very High                |
+
+### Key Observations
+- **ResNet-18** achieved the highest accuracy, benefiting from residual connections.
+- **MobileNet** demonstrated strong performance with reduced computational requirements, making it ideal for mobile or real-time applications.
+- **AlexNet** displayed competitive accuracy, though computationally more intensive than MobileNet.
+
 
