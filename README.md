@@ -102,5 +102,10 @@ The table below summarizes the test accuracy and computational efficiency of eac
 - **ResNet-18** achieved the highest accuracy, benefiting from residual connections.
 - **MobileNet** demonstrated strong performance with reduced computational requirements, making it ideal for mobile or real-time applications.
 - **AlexNet** displayed competitive accuracy, though computationally more intensive than MobileNet.
+### Future Work
+Future directions for this project include:
 
+- **Testing additional lightweight models**: EfficientNet and SqueezeNet can be evaluated for efficiency.
+- **Exploring advanced regularization**: Techniques like batch normalization could enhance performance.
+- **Applying transfer learning**: Fine-tuning pretrained models on CIFAR-10 could improve accuracy.
 
